@@ -1,6 +1,6 @@
 pipeline {
   environment {
-    registry = "faziriya/docker-react-webapp"
+    registry = "faziriya/firstrepo"
     registryCredential = 'Dockerhub'
     dockerImage = ''
   }
