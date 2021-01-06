@@ -13,7 +13,7 @@ pipeline {
         }
       }
     }
-    stage('SonarQube analysis') {
+    /*stage('SonarQube analysis') {
         environment {
             scannerHome = tool 'SonarQube_4.3.0'
         }
@@ -31,8 +31,8 @@ pipeline {
                 '''
             }
         }
-    }
-    /*stage('Deploy Image') {
+    }*/
+    stage('Deploy Image') {
       steps{
          script {
             docker.withRegistry( '', registryCredential ) {
@@ -40,7 +40,7 @@ pipeline {
           }
         }
       }
-    }*/
+    }
     stage('Remove Unused docker image') {
       steps{
         sh "docker rmi $registry:$BUILD_NUMBER"
