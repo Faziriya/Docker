@@ -1,4 +1,4 @@
-FROM node:10
+FROM nginx:1.19.0
 
 # Create app directory
 WORKDIR /docker-react
